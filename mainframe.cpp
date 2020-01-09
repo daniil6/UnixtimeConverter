@@ -29,8 +29,9 @@ void CMainFrame::OnTimerProcess(wxTimerEvent& event)
 {
     wxDateTime dt = wxDateTime::Now();
 
-    tDataTime dataTime{ (uint8_t)dt.GetSecond(), (uint8_t)dt.GetMinute(), (uint8_t)(dt.GetHour() + 3),
-        (uint8_t)dt.GetDay(), (uint8_t)dt.GetMonth(), (uint16_t)dt.GetYear() };
+    tDataTime dataTime{ (uint8_t)dt.GetSecond(), (uint8_t)dt.GetMinute(), (uint8_t)dt.GetHour(), (uint8_t)dt.GetDay(),
+        (uint8_t)dt.GetMonth(), (uint16_t)dt.GetYear() };
+
     long res = CalculateTime(dataTime);
     wxString t_string = wxString::Format(wxT("%i"), res);
 
