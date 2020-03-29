@@ -1,9 +1,7 @@
 #ifndef CMAINFRAME_H
 #define CMAINFRAME_H
 
-//#include "RBKLib.h"
-#include <convert_string_double.h>
-#include <wtime.h>
+#include "RBKLib.h"
 
 #include <wx/grid.h>
 #include <wx/wx.h>
