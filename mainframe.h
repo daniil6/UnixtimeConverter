@@ -1,6 +1,10 @@
 #ifndef CMAINFRAME_H
 #define CMAINFRAME_H
 
+//#include "RBKLib.h"
+#include <convert_string_double.h>
+#include <wtime.h>
+
 #include <wx/grid.h>
 #include <wx/wx.h>
 
@@ -12,11 +16,17 @@ private:
     wxTimer m_timer;
     wxTextCtrl* m_secDataTime;
     wxTextCtrl* m_dataTime;
-    wxGrid* m_grid;
-    wxTextCtrl* m_result;
+    wxGrid* m_gridIn;
+    wxGrid* m_gridOut;
+    wxTextCtrl* m_txtSecOut;
+    wxTextCtrl* m_txtSecIn;
+
+    void SetDefaultValue(tDateTime dateTime, wxString t_string);
+    void SetDateAndTime();
 
     void OnTimerProcess(wxTimerEvent& event);
-    void OnConvert(wxCommandEvent& event);
+    void OnConvertSecondToDateTime(wxCommandEvent& event);
+    void OnConvertDateTimeToSecond(wxCommandEvent& event);
 
     DECLARE_EVENT_TABLE()
 
